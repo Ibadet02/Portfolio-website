@@ -2,8 +2,6 @@ import { useEffect } from "react";
 import hirely from "../../assets/images/dayaq.png";
 import pizzaDelivery from "../../assets/images/pizza-delivery.png";
 import musicPlayer from "../../assets/images/music-player.png";
-import bloggy from "../../assets/images/Bloggy.png";
-import planitio from "../../assets/images/Planitio.png";
 import carRental from '../../assets/images/car-rental.png';
 import { BsGithub, BsArrowRight } from "react-icons/bs";
 import gsap from "gsap";

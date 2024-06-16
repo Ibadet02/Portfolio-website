@@ -11,6 +11,7 @@ import typescript from "../../assets/images/typescript.svg";
 import js from "../../assets/images/js.svg";
 import css from "../../assets/images/css.svg";
 import git from "../../assets/images/git.svg";
+import next from "../../assets/images/next.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -144,7 +145,19 @@ const TechStack = () => {
             ease: "power4.inOut",
           },
           0.4
+        )
+        .from(
+          container.children[10],
+          {
+            opacity: 0,
+            rotation: 110,
+            top: "-20px",
+            duration: 2,
+            ease: "power4.inOut",
+          },
+          0.4
         );
+
       const tl2 = gsap
         .timeline({
           scrollTrigger: {
@@ -160,6 +173,22 @@ const TechStack = () => {
           ease: "power4.inOut",
           duration: 1.4,
         });
+        
+      // Adjust the animation for the last image
+      const lastImage = container.children[10];
+      gsap.from(lastImage, {
+        scrollTrigger: {
+          trigger: container,
+          start: "80% 78%",
+          end: "bottom 70%",
+          toggleActions: 'play none resume pause',
+        },
+        opacity: 0,
+        rotation: 110,
+        top: "-20px",
+        duration: 2,
+        ease: "power4.inOut",
+      });
     });
   });
 
@@ -237,6 +266,13 @@ const TechStack = () => {
         id="css-img"
         title="Git"
         className="tech 2xl:h-28 2xl:w-28 xl:h-24 xl:w-24  lg:h-20 lg:w-20 md:h-20 md:w-20 sm:h-16 sm:w-16 vvs:h-14 vvs:w-14 w-12 h-12 absolute  2xl:top-[140px] 2xl:right-[620px] xl:top-[440px] xl:right-[320px] lg:top-[480px] lg:right-[210px] md:top-[480px] md:right-[210px] sm:top-[400px] sm:right-[140px] vvs:top-[220px] vvs:right-[240px] top-[220px] right-[240px] opacity-1 rotate-[18deg]"
+      />
+      <img
+        src={next}
+        alt="tech-Next"
+        id="css-img"
+        title="Next.js"
+        className="tech 2xl:h-28 2xl:w-28 xl:h-24 xl:w-24  lg:h-20 lg:w-20 md:h-20 md:w-20 sm:h-16 sm:w-16 vvs:h-14 vvs:w-14 w-12 h-12 absolute  2xl:top-[100px] 2xl:right-[420px] xl:top-[240px] xl:right-[320px] lg:top-[380px] lg:right-[210px] md:top-[380px] md:right-[210px] sm:top-[300px] sm:right-[440px] vvs:top-[120px] vvs:right-[240px] top-[120px] right-[240px] opacity-1 rotate-[18deg]"
       />
 
       <h1
